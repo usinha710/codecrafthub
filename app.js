@@ -8,11 +8,13 @@
 'use strict';
 
 const express = require('express');
+const cors = require('cors');
 const fs = require('fs').promises;
 const path = require('path');
 
 // Initialize Express app
 const app = express();
+app.use(cors());
 app.use(express.json()); // Built-in middleware to parse JSON bodies
 
 // Configuration
